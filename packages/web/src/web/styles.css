@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "Poppins", sans-serif;
+  --color-papel: #f4f1e6;
+  --color-limao: #e6ebc4;
+  --color-floresta: #1f4a2c;
+  --color-floresta-2: #2b5f3a;
+  --color-folha: #5a9a3e;
+  --color-globo: #5bb2d6;
+  --color-tinta: #1b2a1f;
+  --color-suave: #5b6b5e;
+  --color-cartao: #fffdf7;
+  --color-borda: #e2ddcb;
+  --color-alerta: #d7262e;
+}
+
+@layer base {
+  * { @apply border-borda; }
+  html, body { @apply bg-papel text-tinta font-sans antialiased; }
+  h1, h2, h3, .font-display { font-family: var(--font-display); letter-spacing: -0.02em; }
+}
+
+.bg-organico {
+  background-color: #f4f1e6;
+  background-image:
+    radial-gradient(40rem 26rem at 105% -10%, #e6ebc4 0%, transparent 60%),
+    radial-gradient(30rem 22rem at -10% 110%, #dfe8cf 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+.leaflet-container { z-index: 0; font-family: var(--font-sans); background: #e9efe4; }
+.leaflet-popup-content-wrapper { border-radius: 14px; box-shadow: 0 10px 30px -10px rgb(31 74 44 / .35); }
+.leaflet-popup-content { margin: 14px 16px; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
